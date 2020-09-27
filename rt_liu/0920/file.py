@@ -32,7 +32,7 @@
 #   close()
 
 # # 文件写
-# f = open("./abc.txt", "w")  # 注意路径的斜杠  /正  \反
+# f = open("../0926/abc.txt", "w")  # 注意路径的斜杠  /正  \反
 # f.write("哈哈哈哈哈")
 # f.close()
 
