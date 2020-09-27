@@ -155,34 +155,14 @@ print(wordsList)
 wordsList.insert(0, 'banana')
 print(wordsList)
 
-# | in | 表示某一个元素在列表中 |
-
-
-# | not in | 表示某个元素不在列表中 |
-
-
-# | index | 某个元素在列表中的索引位置，没有找到的话，会引发异常 |
-
-
-# | count | 某个元素在列表中出现的次数 |
-
-
-# | del | 根据下标进行删除 |
-
-
-# | pop | 删除最后一个元素 |
-
-
-# | remove | 根据元素的值进行删除 |
-
-
-
 # 修改
 print("*"*50)
 wordsList[0] = 'orange'
+print(wordsList)    # 覆盖
 
 # 查找
-# in 和 not in
+# | in | 表示某一个元素在列表中 |
+# | not in | 表示某个元素不在列表中 |
 print("*"*50)
 findName = input("随便输入个水果的名字:")
 if findName in wordsList:
@@ -190,6 +170,8 @@ if findName in wordsList:
 else:
     print("道喜，没有，娃哈哈哈哈！")
 
+# | index | 某个元素在列表中的索引位置，没有找到的话，会引发异常 |
+# | count | 某个元素在列表中出现的次数 |
 # index count
 if wordsList.count(findName) >= 1:
     print(wordsList.index(findName))
@@ -197,95 +179,88 @@ else:
     print("哎呀~")
 
 # 删除
-# 通过del的方式
+# | del | 根据下标进行删除 |
+print("*"*50)
 findName = input("随便输入个水果的名字:")
 if wordsList.count(findName) >= 1:
     index = wordsList.index(findName)
     del wordsList[index]
 print(wordsList)
 
-# 通过pop的方法删除
+# | pop | 删除最后一个元素 |
 wordsList.pop()
 print(wordsList)
 
-# 通过remove的方法删除
+# | remove | 根据元素的值进行删除 |
 findName = input("随便输入个水果的名字:")
 wordsList.remove(findName)
 print(wordsList)
 
+
 # 元组
+# 元组和列表本质上是一样的
+# 元组和列表只有一个区别：
+#   元组只能查看，增删改对于元组来说，都是不可以操作的。
 
-# 元组和列表本质上是一样的，元组和列表只有一个却别，就是元组只能查看，增删改对于元组来说，都是不可以操作的。
-
-tlist = tuple(wordsList)  # 将列表转成元组
+print("*"*50)
+# 将列表转成元组tuple
+tlist = tuple(wordsList)
 print(tlist)  # 打印元组
-['orange', 'apple', 'banan', 'peach']  # 列表的形态
-('orange', 'apple', 'banan', 'peach')  # 元组的形态 ，是一个只读的列表，不可以进行增删改的操作，会引发异常
+# ['orange', 'apple', 'banan', 'peach']  # 列表的形态
+# ('orange', 'apple', 'banan', 'peach')  # 元组的形态 ，是一个只读的列表，不可以进行增删改的操作，会引发异常
 
-### 4.字典
+# 字典
 
-# 4.1字典更类似于JSON
+# 字典更类似于JSON
 #
-# 4.2字典的定义：
+# 字典的定义：
+print("*"*50)
 person = {"name": "bill", "age": 20, "sex": True, "phone": "13888888888"}
 
-# 4.3调用字典：
+# 调用字典：
 print(person["phone"])  # 根据键找到对应的value值
 
 # 4.4字典的常用方法
 
-# | 方法 | 说明 |
-# |:---: |:------------------------: |
-# | del | 删除指定的元素 |
-# | clear | 删除整个字典 |
-# | len | 获取字典中元素的个数 |
-# | keys | 获取字典中所有的键 |
-# | items | 获得字典中所有的字典的列表 |
-# | | |
-# | | |
-
-# 修改字典的值
-person = {"name": "bill", "age": 20, "sex": True, "phone": "13888888888"}
-person["name"] = 'tom'
-print(person)
-
-# 添加属性
-# 直接写就行了
-person = {"name": "bill", "age": 20, "sex": True, "phone": "13888888888"}
-person["name"] = 'tom'
-person["id"] = 1000
-print(person)
-
+print("*"*50)
 # 删除
-person = {"name": "bill", "age": 20, "sex": True, "phone": "13888888888"}
+# | del | 删除指定的元素 |
 person["name"] = 'tom'
 person["id"] = 1000
 del person["sex"]  # 删除指定元素
 print(person)
 
-# clear
-person = {"name": "bill", "age": 20, "sex": True, "phone": "13888888888"}
-person["name"] = 'tom'
-person["id"] = 1000
-del person["sex"]
-print(person)
-
+# | clear | 删除整个字典 |
 person.clear()  # 删除整个字典
 print(person)
 
-# 获取字典中元素的个数
+print("*"*50)
+# | len | 获取字典中元素的个数 |
+person = {"name": "bill", "age": 20, "sex": True, "phone": "13888888888"}
 print(len(person))
 
-# 获取字典中所有的键列表
+# | keys | 获取字典中所有的键 |
 print(person.keys())
 
 # 获得字典中的所有值列表
 print(person.values())
 
-# 获得字典中所有的字典的列表
+# | items | 获得字典中所有的字典的列表 |
 print(person.items())
 
+# 修改字典的值
+person["name"] = 'tom'
+print(person)
+
+# 添加属性
+# 直接写就行了
+person["name"] = 'tom'
+person["id"] = 1000
+print(person)
+
+
 # 列表和字典混合使用
+print("*"*50)
 personList = []
 person = {"name": "", "age": "", "sex": "", "phone": ""}
 
