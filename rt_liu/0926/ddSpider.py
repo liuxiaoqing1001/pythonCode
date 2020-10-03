@@ -5,12 +5,15 @@ import urllib
 import urllib.request
 from selenium.webdriver.chrome.options import Options
 
+# 多页爬虫
+
+
 def savePic(imgUrl,bookid):
-    # 准备头信息，告诉服务器，我是一个浏览器不是爬虫
-    headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3724.8 Safari/537.36"}
+    # 准备头信息，告诉服务器，我是一个浏览器不是爬虫   Fn+F12  network 刷新页面    Request Headers     User-Agent
+    headers = {"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"}
 
     #将图片的url路径复制到浏览器的地址栏中（模拟过程）
-    bookImgRequest = urllib.request.Request(imgUrl,headers=headers)
+    bookImgRequest = urllib.request.Request(imgUrl, headers=headers)
 
     # 将请求发送给服务器端（模拟一个回车的操作）
     fromResponseImg = urllib.request.urlopen(bookImgRequest).read()
@@ -19,26 +22,30 @@ def savePic(imgUrl,bookid):
     bookImgSavePath = "bookimg/"+str(bookid)+".png"
 
     # 保存图片
+    # # 方法一：
     # f = open(bookImgSavePath,"wb")
     # f.write(fromResponseImg)
     # f.close()
 
+    # 方法二：with相当于一个生命周期
     with open(bookImgSavePath,"wb") as f:
         f.write(fromResponseImg)
 
-# 定义使用chrome浏览器，内置浏览器
-# driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe") # 带有窗口界面的
+
+# 定义使用chrome浏览器，内置浏览器，下载chromedriver(保存至/usr/local/bin/)
+# driver = webdriver.Chrome()     # 带有窗口界面的
 myoption = Options()
 myoption.add_argument("--headless")
-driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe",options=myoption)
+driver = webdriver.Chrome(executable_path=r"/usr/local/bin/chromedriver", options=myoption)
+
 
 # 访问网站
 driver.get("http://book.dangdang.com/")
 
-driver.find_element_by_id("key_S").send_keys("python")
+driver.find_element_by_id("key_S").send_keys("python")  # 衬衫  python
 
-# driver.find_element_by_class_name("button").click()
-driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[2]/form/input[9]").click()
+# driver.find_element_by_class_name("button").click()   # 找id/class_name
+driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div[2]/form/input[9]").click()   # 找xml位置
 
 begin = 1
 end = 10
@@ -66,7 +73,7 @@ while begin <= end:
 
     begin += 1
 
-    time.sleep(2)
+    time.sleep(2)   # 等一会儿  爬的快会死
 
     driver.get(newPageUrl)
 
