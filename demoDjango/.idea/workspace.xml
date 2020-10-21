@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d6d2754-961e-4295-b45a-c02645e4f0c3" name="Default Changelist" comment="" />
+    <list default="true" id="2d6d2754-961e-4295-b45a-c02645e4f0c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/book/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/book/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoDjango/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoDjango/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoDjango/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +45,13 @@
     </expand>
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -49,8 +64,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/book" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/book" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="demoDjango" type="Python.DjangoServer" factoryName="Django server">
@@ -88,6 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603204914808</updated>
       <workItem from="1603204916801" duration="2066000" />
+      <workItem from="1603239839983" duration="4761000" />
     </task>
     <servers />
   </component>
@@ -103,5 +127,9 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1043" y="347" width="600" height="413" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1603206227218" />
+    <state x="1002" y="377" key="com.intellij.ide.util.TipDialog" timestamp="1603239873969">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="1002" y="377" key="com.intellij.ide.util.TipDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603239873969" />
   </component>
 </project>

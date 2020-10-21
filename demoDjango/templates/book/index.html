@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            {#alert("aaaaaa");#}
+
+            {#后端传入值，再返回值#}
+            $("#btn").click(function () {
+                $.ajax(
+                    {
+                        url:'test',
+                        type:'post',
+                        data:{
+                            "num1":"12",
+                            "num2":"13"
+                        },
+                        success:function (res) {
+                            alert(res);
+                        }
+                    }
+                )
+            })
+        })
+    </script>
+</head>
+<body>
+
+<h1>Hello!!!</h1>
+
+{#后端传入值，再返回值#}
+
+<button id="btn">测试</button>
+
+</body>
+</html>

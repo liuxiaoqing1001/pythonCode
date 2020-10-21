@@ -52,11 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'demoDjango.urls'
 
+# TEMPLATES模板
 # DIRS 网页page
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/book')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,3 +136,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+stacPath = os.path.dirname(os.path.abspath(__file__))
+stacPath = os.path.join(stacPath, '../')
+STATICFILES_DIRS=(
+    os.path.join(stacPath, 'static/'),
+)
