@@ -1,6 +1,6 @@
 import zipfile
 
-z = zipfile.ZipFile('hh1.zip','w')
+z = zipfile.ZipFile('hh1.zip', 'w')
 try:
     z.write("books1.xlsx")
     z.write('ddSpider1.py')

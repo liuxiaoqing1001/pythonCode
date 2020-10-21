@@ -1,6 +1,9 @@
 from openpyxl import Workbook
 from openpyxl import load_workbook
 
+# openpyxl python读写excel文件
+# 读取
+
 # 加载并读取excel文件
 wb = load_workbook("books.xlsx")
 
@@ -14,4 +17,5 @@ for row in range(2, 4):
         print(sheet[index].value, end="\t")
     print("")
 
+# 关闭工作簿
 wb.close()
