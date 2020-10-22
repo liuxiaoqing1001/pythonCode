@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/liu_db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="jdSpider@localhost" uuid="9218b981-cc47-4837-a38c-6c378135fa20">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/jdSpider</jdbc-url>
+    </data-source>
   </component>
 </project>
